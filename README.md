@@ -18,7 +18,7 @@ fn get_step_backlight(){}
 fn get_curr_backlight(){}
 fn get_blight_file() -> Result<String> {
     // ( ... snip ... )
-    String::from("/sys/class/backlight/intel-backlight/backlight")
+    String::from("/sys/class/backlight/intel-backlight/brightness")
 }
 fn main() {
 
