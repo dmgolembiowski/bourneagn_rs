@@ -3,7 +3,7 @@ Inline Bash scripting within Rust: because you want it. Right?
 
 ## Desired features
 Drawing inspiration from `inline::python` macros, there's a chance that we can use the dark magic of Web Assembly + Rust to control low-level system targets from our Javascript API.
-Specifically, the proof-of-concept test case this package hopes to achieve is creating a `bash! { ... }` macro that can run any BASH commands with the granted authority. In other words, if the user runs a particular browser sandbox as root, then it might be possible to echo new values into the `/sys/class/backlight/@insert_device_symlink/backlight` and control their system level screen brightness from a button click in the browser!
+Specifically, the proof-of-concept test case this package hopes to achieve is creating a `bash! { ... }` macro that can run any BASH commands with the granted authority. In other words, if the user runs a particular browser sandbox as root, then it might be possible to echo new values into the `/sys/class/backlight/@insert_device_symlink/brightness` and control their system level screen brightness from a button click in the browser!
 
 At the time of creating this repository, the projected server API to be compiled into wasm32_unknown_unknown might resemble:
 
