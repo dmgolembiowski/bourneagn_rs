@@ -36,7 +36,7 @@ fn main() {
     let backlight_file: Result<String> = get_blight_file()?;
     // Case-check the backlight-file just to be sure
     bash! {
-        for brightness in ${'min_brightness..'max_brightness}
+        for brightness in {'min_brightness..'max_brightness..'step}
         do
             echo $brightness > 'backlight_file && sleep 0.25
         done
